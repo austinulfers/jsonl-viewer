@@ -1,0 +1,86 @@
+{
+  "name": "jsonl-viewer",
+  "displayName": "JSONL Viewer",
+  "description": "Preview formatted JSONL rows in a side panel",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jsonlViewer.previewLine",
+        "title": "Preview Row",
+        "category": "JSONL",
+        "icon": "$(json)",
+        "enablement": "resourceExtname =~ /\\.(jsonl|ndjson)$/ || editorLangId == jsonl"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "jsonlViewer.previewLine",
+          "when": "resourceExtname =~ /\\.(jsonl|ndjson)$/ || editorLangId == jsonl",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "jsonlViewer.previewLine",
+          "when": "resourceExtname =~ /\\.(jsonl|ndjson)$/ || editorLangId == jsonl",
+          "group": "1_jsonlviewer"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "jsonlViewer.previewLine",
+        "key": "ctrl+alt+j",
+        "mac": "cmd+alt+j",
+        "when": "editorTextFocus && (resourceExtname =~ /\\.(jsonl|ndjson)$/ || editorLangId == jsonl)"
+      }
+    ],
+    "configuration": {
+      "title": "JSONL Viewer",
+      "properties": {
+        "jsonlViewer.followCursor": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically update the preview as the cursor moves between rows while the preview is open."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.120.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.56.1",
+    "eslint": "^9.39.3",
+    "esbuild": "^0.27.3",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}

@@ -1,0 +1,5 @@
+{"id": 1, "name": "Ada Lovelace", "tags": ["math", "computing"], "profile": {"born": 1815, "fields": ["analytical engine"], "active": true}}
+{"id": 2, "name": "Grace Hopper", "tags": ["compilers", "navy"], "profile": {"born": 1906, "fields": ["COBOL", "UNIVAC"], "active": false}}
+{"id": 3, "name": "Broken Row", "oops": missing_quotes}
+
+{"id": 4, "name": "Katherine Johnson", "tags": ["nasa", "orbital mechanics"], "profile": {"born": 1918, "fields": ["trajectory analysis"], "missions": [{"name": "Mercury-Atlas 6", "year": 1962}, {"name": "Apollo 11", "year": 1969}]}}
