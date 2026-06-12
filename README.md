@@ -2,6 +2,8 @@
 
 Preview a formatted, syntax-highlighted view of any row in a `.jsonl` / `.ndjson` file — without copying it into a separate file.
 
+![JSONL Viewer demo](demo.gif)
+
 ## Install Locally
 
 Package the extension as a `.vsix` and install it into VS Code:

@@ -1,7 +1,8 @@
 {
-  "name": "jsonl-viewer",
+  "name": "jsonl-viewer-simple",
   "displayName": "JSONL Viewer",
   "description": "Preview formatted JSONL rows in a side panel",
+  "publisher": "austinulfers",
   "repository": {
     "type": "git",
     "url": "https://github.com/austinulfers/jsonl-viewer.git"
