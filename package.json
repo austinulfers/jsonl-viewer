@@ -2,6 +2,10 @@
   "name": "jsonl-viewer",
   "displayName": "JSONL Viewer",
   "description": "Preview formatted JSONL rows in a side panel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/austinulfers/jsonl-viewer.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.120.0"

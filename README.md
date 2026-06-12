@@ -2,6 +2,19 @@
 
 Preview a formatted, syntax-highlighted view of any row in a `.jsonl` / `.ndjson` file — without copying it into a separate file.
 
+## Install Locally
+
+Package the extension as a `.vsix` and install it into VS Code:
+
+```bash
+npm install
+npm install -g @vscode/vsce
+vsce package
+code --install-extension jsonl-viewer-0.0.1.vsix
+```
+
+Then reload VS Code. To update later, bump the version, re-run `vsce package`, and install the new `.vsix`.
+
 ## Usage
 
 1. Open a `.jsonl` or `.ndjson` file.
