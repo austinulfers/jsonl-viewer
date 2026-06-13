@@ -1,6 +1,6 @@
 {
   "name": "jsonl-viewer-simple",
-  "displayName": "JSONL Viewer",
+  "displayName": "Simple JSONL Viewer",
   "description": "Preview formatted JSONL rows in a side panel",
   "publisher": "austinulfers",
   "repository": {
